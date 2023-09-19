@@ -65,6 +65,7 @@ if __name__ == '__main__':
     m = MyModule()
     m = m.to(device)
     optimizer = torch.optim.SGD(m.parameters(), lr=0.0001)
+    print("torch.cuda.is_available():", torch.cuda.is_available())
 
     for loop in range(100):
         print("--------- 第{}轮开始 ---------".format(loop))
